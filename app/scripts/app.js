@@ -1,8 +1,19 @@
 (function() {
-    angular
-        .module("blocChat", ["firebase"])
-        .controller("ChatCtrl", function($scope, $firebaseArray) {
-            var ref = firebase.database().ref().child("messages");
-            $scope.messages = $firebaseArray(ref);
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+            
+        $stateProvider
+            .state('landing', {
+                url: '/',
+                templateUrl: '/templates/landing.html'
         });
+    }
+    
+    angular
+        .module("blocChat", ["ui.router", "firebase"])
+        .config(config);
 })();
