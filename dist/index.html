@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="/styles/style.css">
 
 </head>
-<body ng-controller="ChatCtrl">
-    <input type="text" ng-model="data.text"/>
-    <h1>You said: {{ data.text }}</h1>
+<body>
+    <nav class="navbar">
+        <a ui-sref="landing" class="logo">
+            <img src="assets/images/bloc-logo-white.png">
+        </a>
+    </nav>
+    
+    <ui-view></ui-view>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script>
         var config = {
