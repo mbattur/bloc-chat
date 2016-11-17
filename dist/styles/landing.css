@@ -1,0 +1,29 @@
+.chat-rooms {
+    position: relative;
+    min-height: 100px;
+    color: white;
+    background-image: url(../assets/images/blur_bg_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main-page {
+    position: relative;
+    min-height: 100px;
+    color: white;
+    background-image: url(../assets/images/blur_bg_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.selling-points {
+    position: relative;
+    min-height: 100px;
+    color: white;
+    background-image: url(../assets/images/blur_bg_3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
