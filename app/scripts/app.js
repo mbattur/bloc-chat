@@ -4,17 +4,22 @@
             .html5Mode({
                 enabled: true,
                 requireBase: false
-            });
+        });
             
         $stateProvider
-            .state('landing', {
+            .state('home', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
-                templateUrl: '/templates/landing.html'
-        });
-    }
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/home.html'
+            })
+            .state('room', {
+                url: '/',
+                controller: 'RoomsCtrl as room',
+                templateUrl: '/templates/room.html',
+            });
+        }
     
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
         .config(config);
 })();
