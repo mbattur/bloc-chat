@@ -3,15 +3,15 @@
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
         
-        var roomService = {};
-        
-        roomService.all = rooms;
-        
-        roomService.addRoom = function(roomName) {
-            rooms.$add({
-                name: roomName
-            });
-        };
+        return {
+            all: rooms
+        }
+
+        // Room.addRoom = function(roomName) {
+        //     rooms.$add({
+        //         name: roomName
+        //     });
+        // };
     }
     
     angular
