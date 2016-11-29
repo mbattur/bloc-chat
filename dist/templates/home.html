@@ -1,7 +1,8 @@
 <section class="chat-rooms">
     <h1>Bloc Chat</h1>
-    <button type="button" class="btn btn-default" ng-click="home.newModal()">Add Room</button>
+    <button type="button" class="btn btn-default" ng-click="home.newModal()">Add Room</button></br></br>
     <div ng-repeat="room in home.rooms">
-        <a href='#'>{{ room }}</a>
-    </div>
+        <a href='#'>{{ room.name }}</a>
+    </div></br>
+    {{ home.rooms.length }} rooms
 </section>

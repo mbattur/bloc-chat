@@ -1,11 +1,12 @@
 (function() {
-    function HomeCtrl(Room) {
+    function HomeCtrl(Room, $modal) {
         this.rooms = Room.all;
         
         this.newModal = function() {
             $modal.open({
-                templateUrl: '/templates/room.html',
-                controller: 'RoomsCtrl as room'
+                templateUrl: 'templates/room.html',
+                controller: 'RoomsCtrl',
+                size: 'sm'
             });
         };
     }
