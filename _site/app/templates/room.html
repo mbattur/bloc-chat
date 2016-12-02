@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <button class="close" ng-click="$close()">&times;</button>
+    <h3 class="modal-title" id="modal-title">New Chat Room</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <p>Enter a name for your new chat room.</p>
+    <input type="text" class="form-control" placeholder="Room name" ng-model="newRoomName">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-info" ng-click="createRoom()">Create</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+</div>

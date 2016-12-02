@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//angular-ui.github.io/bootstrap/ui-bootstrap-1.3.2-csp.css">
+    <link rel="stylesheet" type="text/css" href="/styles/home.css">
+
+</head>
+<body ng-controller="HomeCtrl">
+    <ui-view></ui-view>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script>
+        var config = {
+        apiKey: "AIzaSyDU6Aq_WZifqTT_j00rtQkaWve4HSPoFj8",
+        authDomain: "bloc-chat-e343a.firebaseapp.com",
+        databaseURL: "https://bloc-chat-e343a.firebaseio.com",
+        storageBucket: "bloc-chat-e343a.appspot.com",
+        messagingSenderId: "645889349732"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/RoomsCtrl.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+</body>
+</html>

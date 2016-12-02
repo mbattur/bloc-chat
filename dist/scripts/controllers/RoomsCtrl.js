@@ -10,7 +10,6 @@
                 };
                 
                 Room.create(newRoom).then(function(){
-                    // $scope.newRoom.name = '';
                     $modalInstance.close();
                 });
             } else {

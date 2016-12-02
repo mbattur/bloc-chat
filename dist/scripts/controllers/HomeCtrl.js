@@ -9,6 +9,10 @@
                 size: 'sm'
             });
         };
+        
+        this.changeRoom = function() {
+            console.log('room was clicked!');
+        };
     }
     
     angular

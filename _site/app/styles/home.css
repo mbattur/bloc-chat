@@ -9,10 +9,4 @@ body {
     min-width: 250px;
     background: rgba(230,230,230,1);
     padding-left: 20px;
-    clear: right;
-}
-
-.messages {
-    min-height: 100%;
-    margin-left: 280px;
 }
