@@ -4,13 +4,13 @@
         $scope.newRoom = {};
         
         $scope.createRoom = function(){
-            if(!$scope.newRoom.name || $scope.newRoom.name !== ''){
+            if($scope.newRoomName && $scope.newRoomName !== ''){
                 var newRoom = {
                     name: $scope.newRoomName
                 };
                 
                 Room.create(newRoom).then(function(){
-                    $scope.newRoom.name = '';
+                    // $scope.newRoom.name = '';
                     $modalInstance.close();
                 });
             } else {
