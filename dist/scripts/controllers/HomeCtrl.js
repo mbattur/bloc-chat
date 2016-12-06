@@ -1,6 +1,13 @@
 (function() {
     function HomeCtrl(Room, $modal) {
         this.rooms = Room.all;
+        this.currentRoom = null;
+        this.messages = null;
+
+        this.setRoom = function(room){
+            this.currentRoom = room;
+            this.messages = Room.getMessages(room);
+        };
         
         this.newModal = function() {
             $modal.open({
@@ -10,8 +17,8 @@
             });
         };
         
-        this.changeRoom = function() {
-            console.log('room was clicked!');
+        this.changeRoom = function(room) {
+            this.room = room;
         };
     }
     
