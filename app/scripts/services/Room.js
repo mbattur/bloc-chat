@@ -1,8 +1,9 @@
 (function() {
     function Room($firebaseArray) {
-        var ref = firebase.database().ref();
-        var rooms = $firebaseArray(ref.child('rooms'));
-        var messages = $firebaseArray(ref.child('messages'));
+        var roomsRef = firebase.database().ref().child("rooms");
+        var messagesRef = firebase.database().ref().child("messages");
+        var rooms = $firebaseArray(roomsRef);
+        var messages = $firebaseArray(messagesRef);
         
         return {
             all: rooms,
@@ -21,7 +22,7 @@
             },
             
             getMessages: function(room){
-                return $firebaseArray(messages.orderByChild('roomid').equalTo(room.$id));
+                return $firebaseArray(messagesRef.orderByChild('roomid').equalTo(room.$id));
             }
         };
     }

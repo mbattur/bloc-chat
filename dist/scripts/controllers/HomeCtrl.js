@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, $modal) {
+    function HomeCtrl(Room, Message, $modal) {
         this.rooms = Room.all;
         this.currentRoom = null;
         this.messages = null;
@@ -24,5 +24,5 @@
     
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$modal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$modal', HomeCtrl]);
 })();
