@@ -6,9 +6,9 @@
 
         this.setRoom = function(room){
             this.currentRoom = room;
-            this.messages = Room.getMessages(room);
+            this.messages = Message.getByRoomId(roomId);
         };
-        
+
         this.newModal = function() {
             $modal.open({
                 templateUrl: 'templates/room.html',

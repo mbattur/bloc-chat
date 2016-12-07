@@ -11,19 +11,6 @@
             create: function(room){
                 return rooms.$add(room);
             },
-            
-            addMessage: function(userName, content, room) {
-                messages.$add({
-                    username: userName,
-                    content: content,
-                    sent_at: firebase.database.ServerValue.TIMESTAMP,
-                    roomid: room.$id
-                });
-            },
-            
-            getMessages: function(room){
-                return $firebaseArray(messagesRef.orderByChild('roomid').equalTo(room.$id));
-            }
         };
     }
     
