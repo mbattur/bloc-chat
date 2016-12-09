@@ -1,16 +1,15 @@
 <div class="chat-rooms">
-    <h1>Bloc Chat</h1>
-    <div type="button" class="btn btn-default" ng-click="home.newModal()">Add Room</div></br></br>
+    <h2>Bloc Chat</h2>
+    <div type="button" class="btn btn-primary" ng-click="home.newModal()">Add Room</div></br></br>
     <div ng-repeat='room in home.rooms' ng-click="home.setRoom(room)">
         <a href='#'>{{ room.name }}</a>
     </div></br>
     {{ home.rooms.length }} rooms
 </div>
 <div class="messages">
-    <h3>{{ home.currentRoom.name }}</h3>
-    <div ng-repeat="message in home.messages">
-        <p>{{ message.username }}</p>
+    <h4 class="content">{{ home.currentRoom.name }}</h4></br>
+    <div class="content" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
+        <p><strong>{{ message.username }}</strong> - {{ message.sentAt }}</p>
         <p>{{ message.content }}</p>
-        <p>{{ message.sentAt }}</p>
     </div>
 </div>

@@ -16,10 +16,6 @@
                 size: 'sm'
             });
         };
-        
-        // this.changeRoom = function(room) {
-        //     this.room = room;
-        // };
     }
     
     angular
