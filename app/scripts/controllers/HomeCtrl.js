@@ -6,7 +6,7 @@
 
         this.setRoom = function(room){
             this.currentRoom = room;
-            this.messages = Message.getByRoomId(roomId);
+            this.messages = Message.getByRoomId(room.$id);
         };
 
         this.newModal = function() {
@@ -17,9 +17,9 @@
             });
         };
         
-        this.changeRoom = function(room) {
-            this.room = room;
-        };
+        // this.changeRoom = function(room) {
+        //     this.room = room;
+        // };
     }
     
     angular

@@ -10,5 +10,7 @@
     <h3>{{ home.currentRoom.name }}</h3>
     <div ng-repeat="message in home.messages">
         <p>{{ message.username }}</p>
+        <p>{{ message.content }}</p>
+        <p>{{ message.sentAt }}</p>
     </div>
 </div>
