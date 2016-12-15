@@ -8,7 +8,7 @@
 </div>
 <div class="messages">
     <h4 class="content">{{ home.currentRoom.name }}</h4></br>
-    <div class="content" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
+    <div class="content content-msg" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
         <p><strong>{{ message.username }}</strong> - {{ message.sentAt }}</p>
         <p>{{ message.content }}</p>
     </div>
