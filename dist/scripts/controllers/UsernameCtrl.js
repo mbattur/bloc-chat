@@ -4,7 +4,6 @@
             if(this.text) {
                 console.log(this.text);
                 $cookies.put('blocChatCurrentUser', this.text);
-                this.text = '';
                 $modalInstance.close();
             }
         };
