@@ -5,6 +5,9 @@
         return {
             getByRoomId: function (roomId) {
                 return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            },
+            send: function(newMessage) {
+                // Send method logic
             }
         };
     }

@@ -1,15 +1,25 @@
-<div class="chat-rooms">
-    <h2>Bloc Chat</h2>
-    <div type="button" class="btn btn-primary" ng-click="home.newModal()">Add Room</div></br></br>
-    <div ng-repeat='room in home.rooms' ng-click="home.setRoom(room)">
-        <a href='#'>{{ room.name }}</a>
-    </div></br>
-    {{ home.rooms.length }} rooms
-</div>
-<div class="messages">
-    <h4 class="content">{{ home.currentRoom.name }}</h4></br>
-    <div class="content content-msg" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
-        <p><strong>{{ message.username }}</strong> - {{ message.sentAt }}</p>
-        <p>{{ message.content }}</p>
+<section>
+    <div class="chat-rooms">
+        <h2>Bloc Chat</h2>
+        <div type="button" class="btn btn-default" ng-click="home.newModal()">Add Room</div></br></br>
+        <div ng-repeat='room in home.rooms' ng-click="home.setRoom(room)">
+            <a href='#'>{{ room.name }}</a>
+        </div></br>
+        {{ home.rooms.length }} rooms
     </div>
-</div>
+    <div class="messages">
+        <h4 class="content">{{ home.currentRoom.name }}</h4></br>
+        <div class="content content-msg" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
+            <p><strong>{{ message.username }}</strong> - {{ message.sentAt }}</p>
+            <p>{{ message.content }}</p>
+        </div>
+    </div>
+    <form name="sendMessageForm" class="send-form" ng-submit="home.send()">
+        <div class="input-field">
+            <input type="text" ng-model="home.text" name="text" placeholder="Write your message here...">
+        </div>
+        <div class="send-button">
+            <input type="submit" id="submit" value="Send">
+        </div>
+    </form>
+</section>
