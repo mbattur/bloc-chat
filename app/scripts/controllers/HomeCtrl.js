@@ -8,6 +8,10 @@
             this.currentRoom = room;
             this.messages = Message.getByRoomId(room.$id);
         };
+        
+        this.send = function() {
+            console.log("msg sending");
+        };
 
         this.newModal = function() {
             $modal.open({
