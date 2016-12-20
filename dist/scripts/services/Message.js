@@ -1,6 +1,7 @@
 (function() {
     function Message($firebaseArray, $cookies) {
         var ref = firebase.database().ref().child("messages");
+        var messages = $firebaseArray(ref);
         this.myMessages = {};
         
         return {
@@ -8,7 +9,7 @@
                 return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
             },
             send: function(newMessage) {
-                return ref.$add(newMessage);
+                return messages.$add(newMessage);
             }
         };
     }
