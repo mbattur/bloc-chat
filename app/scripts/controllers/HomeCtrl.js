@@ -10,12 +10,8 @@
         };
         
         this.send = function() {
-            var myUser = $cookies.getObject('blocChatCurrentUser');
-            console.log(myUser);
-            if(this.text && this.currentRoom) {
-                Message.send(myUser, this.text, this.currentRoom);
-                this.text = '';
-            }
+            this.newMessage.roomId = this.currentRoom.$id;
+            this.newMessage.username = $cookies.blocChatCurrentUser;
         };
 
         this.newModal = function() {
