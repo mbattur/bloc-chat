@@ -10,8 +10,12 @@
         };
         
         this.send = function() {
-            this.newMessage.roomId = this.currentRoom.$id;
-            this.newMessage.username = $cookies.blocChatCurrentUser;
+            console.log(inputText);
+            // this.newMessage.roomId = this.currentRoom.$id;
+            // this.newMessage.username = $cookies.blocChatCurrentUser;
+            //TEMPLATE - CONTROLLER - SERVICE - FIREBASE
+            //USE CONSOLE.LOG
+            //DECOMPOSITION 
         };
 
         this.newModal = function() {

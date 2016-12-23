@@ -11,6 +11,7 @@
             send: function(newMessage) {
                 // return messages.$add(newMessage);
                 messages.$add( { content: newMessage, username: $cookies.get('blocChatCurrentUser') });
+                // STUDY FIREBASE ADD
             }
         };
     }
