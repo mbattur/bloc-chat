@@ -3,7 +3,7 @@
         this.submit = function() {
             if(this.text) {
                 console.log(this.text);
-                $cookies.put('blocChatCurrentUser', this.text);
+                $cookies.blocChatCurrentUser = this.text;
                 $modalInstance.close();
             }
         };
