@@ -15,7 +15,7 @@
                     content: newMessage, 
                     roomId: currentRoom.$id, 
                     username: $cookies.blocChatCurrentUser,
-                    sentAt: "9:12am"
+                    sentAt: Date.now()
                 });
             }
         };

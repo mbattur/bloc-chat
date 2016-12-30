@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, Message, $cookies, $modal) {
+    function HomeCtrl(Room, Message, $modal, $cookies) {
         this.rooms = Room.all;
         this.currentRoom = null;
         this.messages = null;

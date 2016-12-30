@@ -10,7 +10,7 @@
     <div class="messages">
         <h4 class="content">{{ home.currentRoom.name }}</h4></br>
         <div class="content content-msg" ng-repeat="message in home.messages" ng-class-odd="'msg-item-odd'">
-            <p><strong>{{ message.username }}</strong> - {{ message.sentAt }}</p>
+            <p><strong>{{ message.username }}</strong> - {{ message.sentAt | date: "medium" }}</p>
             <p>{{ message.content }}</p>
         </div>
     </div>
